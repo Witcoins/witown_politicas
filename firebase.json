@@ -1,0 +1,22 @@
+{
+  "hosting": {
+    "site": "witown-politicas",
+    "public": "public",
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "redirects": [
+      { "source": "/politica-de-tratameinto-de-datos-personales", "destination": "/", "type": 301 },
+      { "source": "/códigos-de-activación", "destination": "/codigos-de-activacion", "type": 301 },
+      { "source": "/c%C3%B3digos-de-activaci%C3%B3n", "destination": "/codigos-de-activacion", "type": 301 }
+    ],
+    "headers": [
+      { "source": "**", "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Cache-Control", "value": "public, max-age=300" }
+      ] },
+      { "source": "/fuentes/**", "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ] }
+    ]
+  }
+}
